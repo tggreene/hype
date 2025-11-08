@@ -2,14 +2,15 @@
 
 import Foundation
 
-let voices = {
+let voices = [
     "Juniper": "aMSt68OGf4xUZAnLpTU8"
-}
+]
 
-// Configuration - Update these with your ElevenLabs API key and voice ID
-let ELEVENLABS_API_KEY = "YOUR_API_KEY_HERE"
-let ELEVENLABS_VOICE_ID = voices["Juniper"] // e.g., "21m00Tcm4TlvDq8ikWAM" for Rachel
 let OUTPUT_DIR = "Hype/Resources"
+
+// Get API key from environment variable
+let ELEVENLABS_API_KEY = ProcessInfo.processInfo.environment["ELEVENLABS_API_KEY"]
+let ELEVENLABS_VOICE_ID = voices["Juniper"] ?? ""
 
 let affirmations = [
     "You are capable of amazing things",
@@ -24,11 +25,11 @@ let affirmations = [
     "Believe in yourself and your abilities"
 ]
 
-func generateAudio(text: String) async throws -> Data {
-    let url = URL(string: "https://api.elevenlabs.io/v1/text-to-speech/\(ELEVENLABS_VOICE_ID)")!
+func generateAudio(text: String, apiKey: String, voiceID: String) async throws -> Data {
+    let url = URL(string: "https://api.elevenlabs.io/v1/text-to-speech/\(voiceID)")!
     var request = URLRequest(url: url)
     request.httpMethod = "POST"
-    request.setValue(ELEVENLABS_API_KEY, forHTTPHeaderField: "xi-api-key")
+    request.setValue(apiKey, forHTTPHeaderField: "xi-api-key")
     request.setValue("application/json", forHTTPHeaderField: "Content-Type")
 
     let requestBody: [String: Any] = [
@@ -83,13 +84,15 @@ func saveAudioFile(data: Data, text: String) throws {
 @MainActor
 func main() async {
     // Check if API key is set
-    if ELEVENLABS_API_KEY == "YOUR_API_KEY_HERE" {
-        print("❌ Error: Please set ELEVENLABS_API_KEY in the script")
+    guard let apiKey = ELEVENLABS_API_KEY, !apiKey.isEmpty else {
+        print("❌ Error: ElevenLabs API key not found!")
+        print("\nPlease set it as an environment variable:")
+        print("  export ELEVENLABS_API_KEY='your-key-here'")
         exit(1)
     }
 
-    if ELEVENLABS_VOICE_ID == "YOUR_VOICE_ID_HERE" {
-        print("❌ Error: Please set ELEVENLABS_VOICE_ID in the script")
+    guard !ELEVENLABS_VOICE_ID.isEmpty else {
+        print("❌ Error: Voice ID not found")
         exit(1)
     }
 
@@ -100,7 +103,7 @@ func main() async {
         print("[\(index + 1)/\(affirmations.count)] Generating: \"\(affirmation)\"")
 
         do {
-            let audioData = try await generateAudio(text: affirmation)
+            let audioData = try await generateAudio(text: affirmation, apiKey: apiKey, voiceID: ELEVENLABS_VOICE_ID)
             try saveAudioFile(data: audioData, text: affirmation)
 
             // Small delay to avoid rate limiting
