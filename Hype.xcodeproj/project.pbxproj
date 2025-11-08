@@ -1,0 +1,252 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		94B6CF282B13398E00C1CF46 /* HypeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B6CF232B13398E00C1CF46 /* HypeApp.swift */; };
+		94B6CF292B13398E00C1CF46 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94B6CF242B13398E00C1CF46 /* ContentView.swift */; };
+		94B6CF2A2B13398E00C1CF46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94B6CF252B13398E00C1CF46 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		94B6CF1F2B13398E00C1CF46 /* Hype.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hype.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		94B6CF232B13398E00C1CF46 /* HypeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HypeApp.swift; sourceTree = "<group>"; };
+		94B6CF242B13398E00C1CF46 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		94B6CF252B13398E00C1CF46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		94B6CF262B13398E00C1CF46 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		94B6CF1C2B13398E00C1CF46 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		94B6CF202B13398E00C1CF46 = {
+			isa = PBXGroup;
+			children = (
+				94B6CF212B13398E00C1CF46 /* Hype */,
+				94B6CF272B13398E00C1CF46 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		94B6CF212B13398E00C1CF46 /* Hype */ = {
+			isa = PBXGroup;
+			children = (
+				94B6CF232B13398E00C1CF46 /* HypeApp.swift */,
+				94B6CF242B13398E00C1CF46 /* ContentView.swift */,
+				94B6CF252B13398E00C1CF46 /* Assets.xcassets */,
+				94B6CF222B13398E00C1CF46 /* Preview Content */,
+			);
+			path = Hype;
+			sourceTree = "<group>";
+		};
+		94B6CF222B13398E00C1CF46 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				94B6CF262B13398E00C1CF46 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		94B6CF272B13398E00C1CF46 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				94B6CF1F2B13398E00C1CF46 /* Hype.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		94B6CF1B2B13398E00C1CF46 /* Hype */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 94B6CF2E2B13398E00C1CF46 /* Build configuration list for PBXNativeTarget "Hype" */;
+			buildPhases = (
+				94B6CF1D2B13398E00C1CF46 /* Sources */,
+				94B6CF1C2B13398E00C1CF46 /* Frameworks */,
+				94B6CF1E2B13398E00C1CF46 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Hype;
+			productName = Hype;
+			productReference = 94B6CF1F2B13398E00C1CF46 /* Hype.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		94B6CF1A2B13398E00C1CF46 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					94B6CF1B2B13398E00C1CF46 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+				};
+			};
+			buildConfigurationList = 94B6CF2B2B13398E00C1CF46 /* Build configuration list for PBXProject "Hype" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 94B6CF202B13398E00C1CF46;
+			productRefGroup = 94B6CF272B13398E00C1CF46 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				94B6CF1B2B13398E00C1CF46 /* Hype */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		94B6CF1E2B13398E00C1CF46 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94B6CF2A2B13398E00C1CF46 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		94B6CF1D2B13398E00C1CF46 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94B6CF292B13398E00C1CF46 /* ContentView.swift in Sources */,
+				94B6CF282B13398E00C1CF46 /* HypeApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		94B6CF2C2B13398E00C1CF46 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				ORGANIZATION_IDENTIFIER = com.tggreene;
+				ORGANIZATION_NAME = tggreene;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		94B6CF2D2B13398E00C1CF46 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				ORGANIZATION_IDENTIFIER = com.tggreene;
+				ORGANIZATION_NAME = tggreene;
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		94B6CF2F2B13398E00C1CF46 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HZLVXYG234;
+				ENABLE_PREVIEWS = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tggreene.hype;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		94B6CF302B13398E00C1CF46 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = HZLVXYG234;
+				ENABLE_PREVIEWS = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tggreene.hype;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		94B6CF2B2B13398E00C1CF46 /* Build configuration list for PBXProject "Hype" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				94B6CF2C2B13398E00C1CF46 /* Debug */,
+				94B6CF2D2B13398E00C1CF46 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		94B6CF2E2B13398E00C1CF46 /* Build configuration list for PBXNativeTarget "Hype" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				94B6CF2F2B13398E00C1CF46 /* Debug */,
+				94B6CF302B13398E00C1CF46 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 94B6CF1A2B13398E00C1CF46 /* Project object */;
+}
