@@ -1,0 +1,14 @@
+# Xcode
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
+!*.xcodeproj/xcshareddata/
+*.xcworkspace/*
+!*.xcworkspace/contents.xcworkspacedata
+*.xcuserstate
+*.xcuserdatad
+
+# macOS
+.DS_Store
+
+# Generated audio files (optional - uncomment if you don't want to commit them)
+Hype/Resources/*.mp3
