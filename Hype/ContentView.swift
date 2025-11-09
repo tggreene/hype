@@ -20,18 +20,9 @@ struct ContentView: View {
         "Believe in yourself and your abilities"
     ]
 
-    // Convert affirmation text to filename (e.g., "You are capable" -> "YouAreCapable")
-    private func fileNameFromText(_ text: String) -> String {
-        let words = text.components(separatedBy: CharacterSet.whitespacesAndNewlines)
-            .map { $0.trimmingCharacters(in: CharacterSet.punctuationCharacters) }
-            .filter { !$0.isEmpty }
-            .map { $0.capitalized }
-        return words.joined()
-    }
-
-    // Map affirmations to audio file names
+    // Use affirmations directly as file names
     private var audioFileNames: [String] {
-        affirmations.map { fileNameFromText($0) }
+        affirmations
     }
 
     @MainActor

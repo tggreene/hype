@@ -13,16 +13,17 @@ let ELEVENLABS_API_KEY = ProcessInfo.processInfo.environment["ELEVENLABS_API_KEY
 let ELEVENLABS_VOICE_ID = voices["Juniper"] ?? ""
 
 let affirmations = [
-    "You are capable of amazing things",
-    "Your potential is limitless",
-    "You are worthy of love and happiness",
-    "Every day is a fresh start",
-    "You have the strength to overcome any challenge",
-    "You are enough, just as you are",
-    "Your dreams are valid and achievable",
-    "You radiate positivity and confidence",
-    "You are creating the life you deserve",
-    "Believe in yourself and your abilities"
+    "You are a majestic beast",
+    // "You are capable of amazing things",
+    // "Your potential is limitless",
+    // "You are worthy of love and happiness",
+    // "Every day is a fresh start",
+    // "You have the strength to overcome any challenge",
+    // "You are enough, just as you are",
+    // "Your dreams are valid and achievable",
+    // "You radiate positivity and confidence",
+    // "You are creating the life you deserve",
+    // "Believe in yourself and your abilities"
 ]
 
 func generateAudio(text: String, apiKey: String, voiceID: String) async throws -> Data {
@@ -34,7 +35,7 @@ func generateAudio(text: String, apiKey: String, voiceID: String) async throws -
 
     let requestBody: [String: Any] = [
         "text": text,
-        "model_id": "eleven_monolingual_v1",
+        "model_id": "eleven_multilingual_v2",
         "voice_settings": [
             "stability": 0.5,
             "similarity_boost": 0.75
@@ -55,17 +56,9 @@ func generateAudio(text: String, apiKey: String, voiceID: String) async throws -
     return data
 }
 
-func fileNameFromText(_ text: String) -> String {
-    // Convert "You are capable of amazing things" -> "YouAreCapableOfAmazingThings"
-    let words = text.components(separatedBy: CharacterSet.whitespacesAndNewlines)
-        .map { $0.trimmingCharacters(in: CharacterSet.punctuationCharacters) }
-        .filter { !$0.isEmpty }
-        .map { $0.capitalized }
-    return words.joined()
-}
-
 func saveAudioFile(data: Data, text: String) throws {
     let fileManager = FileManager.default
+    // Script should be run from project root, so current directory is project root
     let currentDir = fileManager.currentDirectoryPath
     let resourcesDir = (currentDir as NSString).appendingPathComponent(OUTPUT_DIR)
 
@@ -74,7 +67,8 @@ func saveAudioFile(data: Data, text: String) throws {
         try fileManager.createDirectory(atPath: resourcesDir, withIntermediateDirectories: true)
     }
 
-    let fileName = "\(fileNameFromText(text)).mp3"
+    // Use the affirmation text directly as the filename
+    let fileName = "\(text).mp3"
     let filePath = (resourcesDir as NSString).appendingPathComponent(fileName)
 
     try data.write(to: URL(fileURLWithPath: filePath))

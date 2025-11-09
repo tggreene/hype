@@ -16,12 +16,17 @@ This script automates downloading audio files from ElevenLabs for your affirmati
 2. **Run the script**:
    ```bash
    cd /path/to/hype
-   swift generate_audio.swift
+   swift scripts/generate_audio.swift
+   ```
+
+   Or from anywhere:
+   ```bash
+   swift /path/to/hype/scripts/generate_audio.swift
    ```
 
    Or if you made it executable:
    ```bash
-   ./generate_audio.swift
+   ./scripts/generate_audio.swift
    ```
 
 3. **Add files to Xcode**:
