@@ -10,5 +10,10 @@
 # macOS
 .DS_Store
 
+# Build
+build/*
+
+screenshots/*
+
 # Generated audio files (optional - uncomment if you don't want to commit them)
 Hype/Resources/*.mp3
