@@ -45,16 +45,16 @@ echo -e "${BLUE}Step 2: Building and archiving...${NC}"
 echo "This may take a few minutes..."
 echo ""
 
-# Use a more specific destination
+# Use "Any iOS Device" destination (this is what Xcode uses when you select it)
 xcodebuild archive \
     -project "$PROJECT_FILE" \
     -scheme "$SCHEME" \
     -configuration Release \
     -destination "generic/platform=iOS" \
     -archivePath "$FULL_ARCHIVE_PATH" \
-    -allowProvisioningUpdates \
     CODE_SIGN_STYLE=Automatic \
-    DEVELOPMENT_TEAM=HZLVXYG234
+    DEVELOPMENT_TEAM=HZLVXYG234 \
+    -allowProvisioningUpdates
 
 if [ $? -eq 0 ]; then
     echo ""
@@ -74,4 +74,3 @@ else
     echo "❌ Archive failed. Check the error messages above."
     exit 1
 fi
-
