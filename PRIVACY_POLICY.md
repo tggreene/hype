@@ -32,12 +32,4 @@ We may update this Privacy Policy from time to time. Any changes will be posted 
 ## Contact Us
 
 If you have any questions about this Privacy Policy, please contact us at:
-[Your contact email or support URL]
-
----
-
-**Note:** You'll need to:
-1. Replace [Date] with the current date
-2. Replace [Your contact email or support URL] with your actual contact information
-3. Host this on a publicly accessible URL (GitHub Pages, your website, or a free hosting service)
-4. Use that URL in App Store Connect as your Privacy Policy URL
+https://github.com/tggreene/hype
